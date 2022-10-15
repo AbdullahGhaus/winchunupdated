@@ -1,0 +1,281 @@
+/* HEADER CSS */
+
+.Header{
+    padding: 3em 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.logo_container img{
+    font-size: 7vmax;
+    width: 2em;
+}
+.searchinput_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-bottom: 3px solid transparent;
+  border-image: linear-gradient(45deg, #03affe , #9359d5);
+  border-image-slice: 1;
+
+}
+.searchinput_container input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: var(--p);
+    font-family: var(--lemon);
+}
+.searchinput_container input::placeholder{
+    color:white;
+}
+.searchinput_container input:active,.searchinput_container input:focus{
+    outline: none;
+}
+
+.buttons_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn_login{
+    padding: 12px 30px;
+    color: white;
+    background:url('..//Assets/img/loginbtn.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+    border:none;
+    font-size: 15px;
+    font-family: var(--poppin);
+}
+
+.btn_signup{
+    padding: 10px 30px;
+    color: white;
+    cursor: pointer;
+    border:none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.signupbtn_icon{
+    color: black;
+    background-color: white;
+    border-radius: 100%;
+    padding: 2px;
+    font-size: 15px;
+}
+.mobile_loginbtn{
+    display: none;
+}
+.mobilesearch_icon{
+    display: none;
+}
+
+/* NAVBAR CSS */
+
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.Navbar_desktop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.Navbar_desktop p{
+    font-family: var(--lemon);
+    font-size: 15px;
+    margin: 0;
+}
+
+.navbar_hamburger{
+    display: none;
+}
+
+/* COMPHEAD CSS */
+
+
+.CompHead{
+    display: flex;
+    align-items: center;flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.CompHead p{
+    width: 80%;
+text-align: center;
+font-family: var(--poppin);
+color: whitesmoke;
+z-index: 1;
+
+}
+.CompHead h1 {
+    font-family: var(--lemon);
+    color: white;
+    font-size: var(--head);
+    z-index: 1;
+    text-align: center;
+}
+.CompHead h1 span{
+    background: -webkit-linear-gradient(45deg, #03affe , #9359d5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* FOOTER CSS */
+
+.Footer{
+    padding: 6em 8% 6em 8%;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    background:url("../Assets/img/footerbg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+
+}
+.footer_container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer_container h2{
+    font-family: var(--lemon);
+}
+.footer_links{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+.footer_links li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.Footer_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #1b1d6a;
+    color: white;
+}
+.Footer_bottom p{
+    margin: 0;
+}
+
+/* SIGNUP HEADER */
+
+.SignupHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 5% 1em 5%;
+    flex-wrap: wrap;
+}
+.SignupHeader p{
+    color: white;
+}
+.SignupHeader p strong{
+    cursor: pointer;
+}
+
+@media screen and (max-width:810px) {
+    .Header{
+        gap: 10px;
+    }
+    .navbar_hamburger{
+        display: unset;
+    }
+    .Navbar_desktop{
+        display: none;
+    }
+    .CompHead h1{
+        text-align: center;
+    }
+    .CompHead p{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+.searchinput_container input{
+    display: none;
+}
+.desktopsearch_icon{
+    display: none;
+}
+.searchinput_container{
+    border: none;
+}
+.mobilesearch_icon{
+    cursor: pointer;
+    display: unset;
+}
+.logo_container img{
+    width: 2em;
+    font-size: 10vmax;
+}
+.CompHead h1{
+    text-align: center;
+}
+.CompHead p{
+    width: 100%;
+}
+.Footer{
+    justify-content: flex-start;
+    padding: 6em 8% 6em 10%;
+}
+.btn_login,.btn_signup{
+    display: none;
+}
+.mobile_loginbtn{
+    display: unset;
+}
+.SignupHeader{
+    justify-content: center;
+    gap: 20px;
+}
+.CompHead h1{
+    font-size: 30px;
+}
+}
+
+@media screen and (max-width:350px) {
+    .btn_login,.btn_signup{
+        display: none;
+    }
+    .mobile_loginbtn{
+        display: unset;
+    }
+    .CompHead h1{
+        text-align: center;
+       
+    }
+    .CompHead p{
+        width: 100%;
+    }
+}
+
